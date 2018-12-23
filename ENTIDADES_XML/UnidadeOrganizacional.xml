@@ -1,0 +1,14 @@
+<entidade>
+<name>br.gov.mec.siga.edu.nucleo.dominio.UnidadeOrganizacional</name> 
+<atributes>
+<atribute type="long">id</atribute>
+<atribute type="class java.lang.String">nome</atribute>
+<atribute type="class java.lang.String">responsavel</atribute>
+<atribute type="class br.gov.mec.siga.edu.nucleo.dominio.Instituicao">instituicao</atribute>
+<atribute type="class java.util.Date">dataInicio</atribute>
+<atribute type="class java.util.Date">dataFim</atribute>
+<atribute type="class br.gov.mec.siga.edu.nucleo.dominio.UnidadeOrganizacional">unidadeOrganizacional</atribute>
+<atribute type="class br.gov.mec.siga.edu.nucleo.dominio.UnidadeEnsino">unidadeEnsino</atribute>
+<atribute type="class br.gov.mec.siga.edu.nucleo.dominio.EstruturaOrganizacional">estruturaOrganizacional</atribute>
+</atributes>
+</entidade>

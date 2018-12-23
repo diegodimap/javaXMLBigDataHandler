@@ -1,0 +1,10 @@
+<colunas>
+<coluna>
+<name>turnos</name> 
+<type>numeric</type>
+</coluna>
+<coluna>
+<name>cursos</name> 
+<type>numeric</type>
+</coluna>
+</colunas>

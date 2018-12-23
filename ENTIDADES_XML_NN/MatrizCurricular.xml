@@ -1,0 +1,7 @@
+<entidade>
+<name>br.gov.mec.siga.edu.nucleo.dominio.MatrizCurricular</name> 
+<atributes>
+<atribute type="interface java.util.Collection">componenteCurricular</atribute>
+<atribute type="interface java.util.Set">regrasAcademicas</atribute>
+</atributes>
+</entidade>

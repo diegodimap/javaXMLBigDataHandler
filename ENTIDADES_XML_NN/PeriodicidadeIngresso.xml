@@ -1,0 +1,6 @@
+<entidade>
+<name>br.gov.mec.siga.edu.nucleo.dominio.PeriodicidadeIngresso</name> 
+<atributes>
+<atribute type="interface java.util.List">curso</atribute>
+</atributes>
+</entidade>

@@ -1,0 +1,9 @@
+<entidade>
+<name>br.gov.mec.siga.edu.nucleo.dominio.DocumentoOficial</name> 
+<atributes>
+<atribute type="long">id</atribute>
+<atribute type="class java.lang.String">descricao</atribute>
+<atribute type="class java.util.Date">dataEmissao</atribute>
+<atribute type="class java.util.Date">dataPublicacao</atribute>
+</atributes>
+</entidade>

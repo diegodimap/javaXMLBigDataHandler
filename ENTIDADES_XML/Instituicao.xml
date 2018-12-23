@@ -1,0 +1,22 @@
+<entidade>
+<name>br.gov.mec.siga.edu.nucleo.dominio.Instituicao</name> 
+<atributes>
+<atribute type="long">id</atribute>
+<atribute type="class java.lang.String">nome</atribute>
+<atribute type="class java.lang.String">sigla</atribute>
+<atribute type="class java.lang.String">razaoSocial</atribute>
+<atribute type="class java.lang.String">cnpj</atribute>
+<atribute type="class java.lang.String">endereco</atribute>
+<atribute type="class java.lang.String">telefonePrincipal</atribute>
+<atribute type="class java.lang.String">emailPrincipal</atribute>
+<atribute type="class java.lang.String">siteOficial</atribute>
+<atribute type="class java.lang.String">regimeJuridico</atribute>
+<atribute type="class java.lang.String">organizacaoAcademica</atribute>
+<atribute type="class java.lang.String">categoriaAdministrativa</atribute>
+<atribute type="class java.lang.String">estatutoDoRegimento</atribute>
+<atribute type="class java.lang.String">documentoOficial</atribute>
+<atribute type="class java.lang.String">situacaoLegal</atribute>
+<atribute type="class java.lang.String">situacaoDeFuncionamento</atribute>
+<atribute type="class java.util.Date">dataFundacao</atribute>
+</atributes>
+</entidade>

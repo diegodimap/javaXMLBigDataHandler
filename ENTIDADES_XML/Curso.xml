@@ -1,0 +1,24 @@
+<entidade>
+<name>br.gov.mec.siga.edu.nucleo.dominio.Curso</name> 
+<atributes>
+<atribute type="long">id</atribute>
+<atribute type="class java.lang.String">codigo</atribute>
+<atribute type="class java.lang.String">nome</atribute>
+<atribute type="class java.util.Date">inicioFuncionamento</atribute>
+<atribute type="class java.util.Date">fimFuncionamento</atribute>
+<atribute type="int">tempoMinimoIntegralizacao</atribute>
+<atribute type="int">tempoMaximoIntegralizacao</atribute>
+<atribute type="class java.lang.String">codigoComposicaoTurma</atribute>
+<atribute type="class java.lang.String">codigoComposicaoMatricula</atribute>
+<atribute type="class java.lang.String">sigla</atribute>
+<atribute type="int">numeroVagas</atribute>
+<atribute type="class java.util.Date">dataAutorizacao</atribute>
+<atribute type="class br.gov.mec.siga.edu.nucleo.dominio.PeriodicidadeIngresso">periodicidadeIngresso</atribute>
+<atribute type="class br.gov.mec.siga.edu.nucleo.dominio.RegimeMatricula">regimeMatricula</atribute>
+<atribute type="class br.gov.mec.siga.edu.nucleo.dominio.UnidadeOrganizacional">unidadeOrganizacional</atribute>
+<atribute type="class br.gov.mec.siga.edu.nucleo.dominio.ModalidadeEnsino">modalidadeEnsino</atribute>
+<atribute type="class br.gov.mec.siga.edu.nucleo.dominio.NivelEnsino">nivelEnsino</atribute>
+<atribute type="class br.gov.mec.siga.edu.nucleo.dominio.SituacaoCurso">situacaoCurso</atribute>
+<atribute type="class br.gov.mec.siga.edu.nucleo.dominio.DocumentoOficial">documentoOficial</atribute>
+</atributes>
+</entidade>

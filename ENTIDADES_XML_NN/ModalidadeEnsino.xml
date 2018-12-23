@@ -1,0 +1,8 @@
+<entidade>
+<name>br.gov.mec.siga.edu.nucleo.dominio.ModalidadeEnsino</name> 
+<atributes>
+<atribute type="interface java.util.List">curso</atribute>
+<atribute type="interface java.util.Set">regrasAcademicas</atribute>
+<atribute type="interface java.util.Set">estruturaAvaliacao</atribute>
+</atributes>
+</entidade>

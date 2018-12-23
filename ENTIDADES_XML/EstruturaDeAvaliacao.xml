@@ -1,0 +1,15 @@
+<entidade>
+<name>br.gov.mec.siga.edu.nucleo.dominio.EstruturaDeAvaliacao</name> 
+<atributes>
+<atribute type="long">id</atribute>
+<atribute type="class java.lang.String">nome</atribute>
+<atribute type="class java.util.Date">dataInicialVigencia</atribute>
+<atribute type="int">numEtapas</atribute>
+<atribute type="boolean">ativa</atribute>
+<atribute type="class br.gov.mec.siga.edu.nucleo.dominio.Curso">curso</atribute>
+<atribute type="class br.gov.mec.siga.edu.nucleo.dominio.UnidadeEnsino">unidadeEnsino</atribute>
+<atribute type="class br.gov.mec.siga.edu.nucleo.dominio.ModalidadeEnsino">modalidadeEnsino</atribute>
+<atribute type="class br.gov.mec.siga.edu.nucleo.dominio.NivelEnsino">nivelEnsino</atribute>
+<atribute type="class br.gov.mec.siga.edu.nucleo.dominio.UnidadeOrganizacional">unidadeOrganizacional</atribute>
+</atributes>
+</entidade>

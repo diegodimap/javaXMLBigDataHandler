@@ -1,0 +1,10 @@
+<colunas>
+<coluna>
+<name>cursos</name> 
+<type>numeric</type>
+</coluna>
+<coluna>
+<name>regrasAcademicas</name> 
+<type>numeric</type>
+</coluna>
+</colunas>

@@ -1,0 +1,9 @@
+<entidade>
+<name>br.gov.mec.siga.edu.nucleo.dominio.Certificacao</name> 
+<atributes>
+<atribute type="long">id</atribute>
+<atribute type="class java.lang.String">titulo</atribute>
+<atribute type="class br.gov.mec.siga.edu.nucleo.dominio.Curso">curso</atribute>
+<atribute type="class br.gov.mec.siga.edu.nucleo.dominio.NivelEnsino">nivelEnsino</atribute>
+</atributes>
+</entidade>

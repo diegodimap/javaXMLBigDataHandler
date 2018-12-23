@@ -1,0 +1,7 @@
+<entidade>
+<name>br.gov.mec.siga.edu.nucleo.dominio.RegimeMatricula</name> 
+<atributes>
+<atribute type="long">id</atribute>
+<atribute type="class java.lang.String">nome</atribute>
+</atributes>
+</entidade>

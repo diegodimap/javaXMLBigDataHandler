@@ -1,0 +1,8 @@
+<entidade>
+<name>br.gov.mec.siga.edu.nucleo.dominio.Dirigente</name> 
+<atributes>
+<atribute type="long">id</atribute>
+<atribute type="class java.lang.String">cargo</atribute>
+<atribute type="class java.lang.String">titulo</atribute>
+</atributes>
+</entidade>

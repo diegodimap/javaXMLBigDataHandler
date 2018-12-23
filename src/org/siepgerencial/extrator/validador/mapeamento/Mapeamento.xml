@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapeamento  xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+   xmlns='http://siep.mec.gov.br'
+   xsi:schemaLocation='http://siep.mec.gov.br Mapeamento.xsd'>
+    
+    <!-- Atividade Acadêmica -->
+    <EntidadeOO nome="AtividadeAcademica" classe="br.gov.mec.siga.edu.nucleo.dominio.AtividadeAcademica">
+        <EntidadeER nome="SIEP_AtividadeAcademica" isJoinTable="false" isPrincipal="true">
+            <ChavePrimaria nome="id"/>
+            <ChaveEstrangeira nome="unidadeOrganizacional"/>
+        </EntidadeER>
+    </EntidadeOO>
+    
+    <!-- Atividades Requisitadas -->
+    <EntidadeOO nome="AtividadesRequisitadas" classe="br.gov.mec.siga.edu.nucleo.dominio.AtividadesRequisitadas">
+        <EntidadeER nome="SIEP_AtividadesRequisitadas"  isJoinTable="false" isPrincipal="true">
+            <ChavePrimaria nome="id"/>
+            <ChaveEstrangeira nome="atividadeAcademica"/>
+        </EntidadeER>
+    </EntidadeOO>
+    
+    <!-- Calendario Academico -->
+    <EntidadeOO nome="CalendarioAcademico" classe="br.gov.mec.siga.edu.nucleo.dominio.CalendarioAcademico">
+        <EntidadeER nome="SIEP_CalendarioAcademico" isJoinTable="false" isPrincipal="true">
+            <ChavePrimaria nome="id"/>
+            <ChaveEstrangeira nome="unidadeEnsino"/>
+            <ChaveEstrangeira nome="curso"/>
+        </EntidadeER>
+        <EntidadeER nome="SIEP_CALENDARIOACADEMICO_CURSO" isJoinTable="true" isPrincipal="false">
+        	<ChaveEstrangeira nome="cursos"/>
+            <ChaveEstrangeira nome="calendariosAcademicos"/>
+        </EntidadeER>
+    </EntidadeOO>
+ 
+    <!-- Certificação -->
+    <EntidadeOO nome="Certificacao" classe="br.gov.mec.siga.edu.nucleo.dominio.Certificacao">
+        <EntidadeER nome="SIEP_Certificacao" isJoinTable="false" isPrincipal="true">
+            <ChavePrimaria nome="id"/>
+            <ChaveEstrangeira nome="curso"/>
+            <ChaveEstrangeira nome="nivelEnsino"/>
+        </EntidadeER>
+    </EntidadeOO>
+    
+    <!-- Componente Curricular -->
+    <EntidadeOO nome="ComponenteCurricular" classe="br.gov.mec.siga.edu.nucleo.dominio.ComponenteCurricular">
+        <EntidadeER nome="SIEP_ComponenteCurricular" isJoinTable="false" isPrincipal="true">
+            <ChavePrimaria nome="id"/>
+            <ChaveEstrangeira nome="matrizCurricular"/>
+            <ChaveEstrangeira nome="atividadeAcademica"/>
+        </EntidadeER>
+    </EntidadeOO>
+    
+    <!-- Curso -->
+    <EntidadeOO nome="Curso" classe="br.gov.mec.siga.edu.nucleo.dominio.Curso">
+        <EntidadeER nome="SIEP_Curso" isJoinTable="false" isPrincipal="true">
+            <ChavePrimaria nome="id"/>
+            <ChaveEstrangeira nome="periodicidadeIngresso"/>
+            <ChaveEstrangeira nome="regimeMatricula"/>
+            <ChaveEstrangeira nome="unidadeOrganizacional"/>
+            <ChaveEstrangeira nome="modalidadeEnsino"/>
+            <ChaveEstrangeira nome="nivelEnsino"/>
+            <ChaveEstrangeira nome="situacaoCurso"/>
+            <ChaveEstrangeira nome="documentoOficial"/>
+        </EntidadeER>
+        <EntidadeER nome="SIEP_CALENDARIOACADEMICO_CURSO" isJoinTable="true" isPrincipal="false">
+        	<ChaveEstrangeira nome="cursos"/>
+            <ChaveEstrangeira nome="calendariosAcademicos"/>
+        </EntidadeER>
+        <EntidadeER nome="SIEP_CURSO_REGRAACADEMICA" isJoinTable="true" isPrincipal="false">
+        	<ChaveEstrangeira nome="regrasAcademicas"/>
+        	<ChaveEstrangeira nome="cursos"/>
+        </EntidadeER>
+        <EntidadeER nome="SIEP_CURSO_TURNO" isJoinTable="true" isPrincipal="false">
+        	<ChaveEstrangeira nome="turnos"/>
+        	<ChaveEstrangeira nome="cursos"/>
+        </EntidadeER>
+    </EntidadeOO>
+    
+    <!-- Dirigente -->
+    <EntidadeOO nome="Dirigente" classe="br.gov.mec.siga.edu.nucleo.dominio.Dirigente">
+        <EntidadeER nome="SIEP_Dirigente" isJoinTable="false" isPrincipal="true">
+            <ChavePrimaria nome="id"/>
+        </EntidadeER>
+    </EntidadeOO>
+    
+    <!-- Documento Oficial -->
+    <EntidadeOO nome="DocumentoOficial" classe="br.gov.mec.siga.edu.nucleo.dominio.DocumentoOficial">
+        <EntidadeER nome="SIEP_DocumentoOficial" isJoinTable="false" isPrincipal="true">
+            <ChavePrimaria nome="id"/>
+        </EntidadeER>
+    </EntidadeOO>
+    
+    <!-- Estrutura De Avaliação -->
+    <EntidadeOO nome="EstruturaDeAvaliacao" classe="br.gov.mec.siga.edu.nucleo.dominio.EstruturaDeAvaliacao">
+        <EntidadeER nome="SIEP_EstruturaDeAvaliacao" isJoinTable="false" isPrincipal="true">
+            <ChavePrimaria nome="id"/>
+            <ChaveEstrangeira nome="curso"/>
+            <ChaveEstrangeira nome="unidadeEnsino"/>
+            <ChaveEstrangeira nome="modalidadeEnsino"/>
+            <ChaveEstrangeira nome="nivelEnsino"/>
+            <ChaveEstrangeira nome="unidadeOrganizacional"/>
+        </EntidadeER>
+    </EntidadeOO>
+    
+    <!-- Estrutura Organizacional -->
+    <EntidadeOO nome="EstruturaOrganizacional" classe="br.gov.mec.siga.edu.nucleo.dominio.EstruturaOrganizacional">
+        <EntidadeER nome="SIEP_EstruturaOrganizacional" isJoinTable="false" isPrincipal="true">
+            <ChavePrimaria nome="id"/>
+            <ChaveEstrangeira nome="unidadeEnsino"/>
+        </EntidadeER>
+    </EntidadeOO>
+    
+    <!-- Etapa Avaliacao -->
+    <EntidadeOO nome="EtapaAvaliacao" classe="br.gov.mec.siga.edu.nucleo.dominio.EtapaAvaliacao">
+        <EntidadeER nome="SIEP_EtapaAvaliacao" isJoinTable="false" isPrincipal="true">
+            <ChavePrimaria nome="id"/>
+            <ChaveEstrangeira nome="estruturaDeAvaliacao"/>
+        </EntidadeER>
+    </EntidadeOO>
+    
+    <!-- Instituição -->
+    <EntidadeOO nome="Instituicao" classe="br.gov.mec.siga.edu.nucleo.dominio.Instituicao">
+        <EntidadeER nome="SIEP_Instituicao" isJoinTable="false" isPrincipal="true">
+            <ChavePrimaria nome="id"/>
+        </EntidadeER>
+    </EntidadeOO>
+    
+    <!-- Matrícula -->
+    <EntidadeOO nome="Matricula" classe="br.gov.mec.siga.edu.nucleo.dominio.Matricula">
+        <EntidadeER nome="SIEP_Matricula" isJoinTable="false" isPrincipal="true">
+            <ChavePrimaria nome="id"/>
+            <ChaveEstrangeira nome="curso"/>
+        </EntidadeER>
+    </EntidadeOO>
+    
+    <!-- Matriz Curricular -->
+    <EntidadeOO nome="MatrizCurricular" classe="br.gov.mec.siga.edu.nucleo.dominio.MatrizCurricular">
+        <EntidadeER nome="SIEP_MatrizCurricular" isJoinTable="false" isPrincipal="true">
+            <ChavePrimaria nome="id"/>
+            <ChaveEstrangeira nome="curso"/>
+        </EntidadeER>
+        <EntidadeER nome="SIEP_MATRIZCURRICULAR_REGRAACADEMICA" isJoinTable="true" isPrincipal="false">
+        	<ChaveEstrangeira nome="regrasAcademicas"/>
+        	<ChaveEstrangeira nome="matrizesCurriculares"/>
+        </EntidadeER>
+    </EntidadeOO>
+    
+    <!-- Modalidade Ensino -->
+    <EntidadeOO nome="ModalidadeEnsino" classe="br.gov.mec.siga.edu.nucleo.dominio.ModalidadeEnsino">
+        <EntidadeER nome="SIEP_ModalidadeEnsino" isJoinTable="false" isPrincipal="true">
+            <ChavePrimaria nome="id"/>
+        </EntidadeER>
+        <EntidadeER nome="SIEP_MODALIDADEENSINO_REGRAACADEMICA" isJoinTable="true" isPrincipal="false">
+        	<ChaveEstrangeira nome="regrasAcademicas"/>
+        	<ChaveEstrangeira nome="modalidadesEnsino"/>
+        </EntidadeER>
+    </EntidadeOO>
+    
+    <!-- Nivel Ensino -->
+    <EntidadeOO nome="NivelEnsino" classe="br.gov.mec.siga.edu.nucleo.dominio.NivelEnsino">
+        <EntidadeER nome="SIEP_NivelEnsino" isJoinTable="false" isPrincipal="true">
+            <ChavePrimaria nome="id"/>
+        </EntidadeER>
+        <EntidadeER nome="SIEP_NIVELENSINO_REGRAACADEMICA" isJoinTable="true" isPrincipal="false">
+        	<ChaveEstrangeira nome="regrasAcademicas"/>
+        	<ChaveEstrangeira nome="niveisEnsino"/>
+        </EntidadeER>
+    </EntidadeOO>
+    
+    <!-- Periodicidade Ingresso -->
+    <EntidadeOO nome="PeriodicidadeIngresso" classe="br.gov.mec.siga.edu.nucleo.dominio.PeriodicidadeIngresso">
+        <EntidadeER nome="SIEP_PeriodicidadeIngresso" isJoinTable="false" isPrincipal="true">
+            <ChavePrimaria nome="id"/>
+        </EntidadeER>
+    </EntidadeOO>
+    
+    <!-- Regime Matrícula -->
+    <EntidadeOO nome="RegimeMatricula" classe="br.gov.mec.siga.edu.nucleo.dominio.RegimeMatricula">
+        <EntidadeER nome="SIEP_RegimeMatricula"  isJoinTable="false" isPrincipal="true">
+            <ChavePrimaria nome="id"/>
+        </EntidadeER>
+    </EntidadeOO>
+    
+    <!-- Regra Acadêmica -->
+    <EntidadeOO nome="RegraAcademica" classe="br.gov.mec.siga.edu.nucleo.dominio.RegraAcademica">
+        <EntidadeER nome="SIEP_RegraAcademica" isJoinTable="false" isPrincipal="true">
+            <ChavePrimaria nome="id"/>
+        </EntidadeER>
+         <EntidadeER nome="SIEP_MODALIDADEENSINO_REGRAACADEMICA" isJoinTable="true" isPrincipal="false">
+        	<ChaveEstrangeira nome="regrasAcademicas"/>
+        	<ChaveEstrangeira nome="modalidadesEnsino"/>
+        </EntidadeER>
+        <EntidadeER nome="SIEP_NIVELENSINO_REGRAACADEMICA" isJoinTable="true" isPrincipal="false">
+        	<ChaveEstrangeira nome="regrasAcademicas"/>
+        	<ChaveEstrangeira nome="niveisEnsino"/>
+        </EntidadeER>
+        <EntidadeER nome="SIEP_REGRAACADEMICA_UNIDADEENSINO" isJoinTable="true" isPrincipal="false">
+        	<ChaveEstrangeira nome="unidadesEnsino"/>
+        	<ChaveEstrangeira nome="regrasAcademicas"/>
+        </EntidadeER>
+         <EntidadeER nome="SIEP_CURSO_REGRAACADEMICA" isJoinTable="true" isPrincipal="false">
+        	<ChaveEstrangeira nome="regrasAcademicas"/>
+        	<ChaveEstrangeira nome="cursos"/>
+        </EntidadeER>
+        <EntidadeER nome="SIEP_MATRIZCURRICULAR_REGRAACADEMICA" isJoinTable="true" isPrincipal="false">
+        	<ChaveEstrangeira nome="regrasAcademicas"/>
+        	<ChaveEstrangeira nome="matrizesCurriculares"/>
+        </EntidadeER>
+    </EntidadeOO>
+    
+    <!-- Situacao Curso -->
+    <EntidadeOO nome="SituacaoCurso" classe="br.gov.mec.siga.edu.nucleo.dominio.SituacaoCurso">
+        <EntidadeER nome="SIEP_SituacaoCurso" isJoinTable="false" isPrincipal="true">
+            <ChavePrimaria nome="id"/>
+        </EntidadeER>
+    </EntidadeOO>
+    
+    <!-- Turno -->
+    <EntidadeOO nome="Turno" classe="br.gov.mec.siga.edu.nucleo.dominio.Turno">
+        <EntidadeER nome="SIEP_Turno" isJoinTable="false" isPrincipal="true">
+            <ChavePrimaria nome="id"/>
+        </EntidadeER>
+        <EntidadeER nome="SIEP_CURSO_TURNO" isJoinTable="true" isPrincipal="false">
+        	<ChaveEstrangeira nome="turnos"/>
+        	<ChaveEstrangeira nome="cursos"/>
+        </EntidadeER>
+    </EntidadeOO>
+    
+    <!-- Unidade Ensino -->
+    <EntidadeOO nome="UnidadeEnsino" classe="br.gov.mec.siga.edu.nucleo.dominio.UnidadeEnsino">
+        <EntidadeER nome="SIEP_UnidadeEnsino" isJoinTable="false" isPrincipal="true">
+            <ChavePrimaria nome="id"/>
+            <ChaveEstrangeira nome="instituicao"/>
+        </EntidadeER>
+         <EntidadeER nome="SIEP_REGRAACADEMICA_UNIDADEENSINO" isJoinTable="true" isPrincipal="false">
+        	<ChaveEstrangeira nome="unidadesEnsino"/>
+        	<ChaveEstrangeira nome="regrasAcademicas"/>
+        </EntidadeER>
+    </EntidadeOO>
+    
+    <!-- Unidade Organizacional -->
+    <EntidadeOO nome="UnidadeOrganizacional" classe="br.gov.mec.siga.edu.nucleo.dominio.UnidadeOrganizacional">
+        <EntidadeER nome="SIEP_UnidadeOrganizacional" isJoinTable="false" isPrincipal="true">
+            <ChavePrimaria nome="id"/>
+            <ChaveEstrangeira nome="instituicao"/>
+            <ChaveEstrangeira nome="unidadeOrganizacional"/>
+            <ChaveEstrangeira nome="unidadeEnsino"/>
+            <ChaveEstrangeira nome="estruturaOrganizacional"/>
+        </EntidadeER>
+    </EntidadeOO>
+    
+    <!-- Unidade Organizacional Dirigente -->
+    <EntidadeOO nome="UnidadeOrganizacionalDirigente" classe="br.gov.mec.siga.edu.nucleo.dominio.UnidadeOrganizacionalDirigente">
+        <EntidadeER nome="SIEP_UnidadeOrganizacionalDirigente" isJoinTable="false" isPrincipal="true">
+            <ChavePrimaria nome="id"/>
+            <ChaveEstrangeira nome="dirigente"/>
+            <ChaveEstrangeira nome="unidadeOrganizacional"/>
+        </EntidadeER>
+    </EntidadeOO>
+    
+    <!-- Relacionamentos -->
+    
+    <!-- Atividade Acadêmica -->
+    <Relacionamento entidade1="UnidadeOrganizacional" entidadeN="AtividadeAcademica" tipo="oneToMany"/>
+    
+    <!-- Atividades Requisitadas -->
+    <Relacionamento entidade1="AtividadeAcademica" entidadeN="AtividadesRequisitadas" tipo="oneToMany"/>
+    
+    <!-- Calendario Academico -->
+    <Relacionamento entidade1="UnidadeEnsino" entidadeN="CalendarioAcademico" tipo="oneToMany"/>
+    <Relacionamento entidade1="CalendarioAcademico" entidadeN="Curso" tipo="manyToMany"/>
+    
+    <!-- Certificação -->
+    <Relacionamento entidade1="Curso" entidadeN="Certificacao" tipo="oneToMany"/>
+    <Relacionamento entidade1="NivelEnsino" entidadeN="Certificacao" tipo="oneToMany"/>
+    
+    <!-- Componente Curricular -->
+    <Relacionamento entidade1="MatrizCurricular" entidadeN="ComponenteCurricular" tipo="oneToMany"/>
+    <Relacionamento entidade1="AtividadeAcademica" entidadeN="ComponenteCurricular" tipo="oneToMany"/>
+    
+    <!-- Curso -->
+    <Relacionamento entidade1="Curso" entidadeN="RegraAcademica" tipo="manyToMany"/>
+    <Relacionamento entidade1="Curso" entidadeN="Turno" tipo="manyToMany"/>
+    <Relacionamento entidade1="PeriodicidadeIngresso" entidadeN="Curso" tipo="oneToMany"/>
+    <Relacionamento entidade1="RegimeMatricula" entidadeN="Curso" tipo="oneToMany"/>
+    <Relacionamento entidade1="UnidadeOrganizacional" entidadeN="Curso" tipo="oneToMany"/>
+    <Relacionamento entidade1="ModalidadeEnsino" entidadeN="Curso" tipo="oneToMany"/>
+    <Relacionamento entidade1="NivelEnsino" entidadeN="Curso" tipo="oneToMany"/>
+    <Relacionamento entidade1="SituacaoCurso" entidadeN="Curso" tipo="oneToMany"/>
+    <Relacionamento entidade1="DocumentoOficial" entidadeN="Curso" tipo="oneToMany"/>
+    
+    <!--Estrutura Organizacional -->
+    <Relacionamento entidade1="UnidadeEnsino" entidadeN="EstruturaOrganizacional" tipo="oneToMany"/>
+    
+    <!-- Etapa Avaliacao -->
+    <Relacionamento entidade1="EstruturaDeAvaliacao" entidadeN="EtapaAvaliacao" tipo="oneToMany"/>
+    
+    <!-- Matrícula -->
+    <Relacionamento entidade1="Curso" entidadeN="Matricula" tipo="oneToMany"/>
+    <Relacionamento entidade1="Curso" entidadeN="MatrizCurricular" tipo="oneToMany"/>
+    <Relacionamento entidade1="ModalidadeEnsino" entidadeN="RegraAcademica" tipo="manyToMany"/>
+ 
+</mapeamento>
+

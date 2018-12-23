@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            targetNamespace="http://siep.mec.gov.br"
+            xmlns="http://siep.mec.gov.br"
+            elementFormDefault="qualified">
+    <xsd:element name="mapeamento">
+        <xsd:complexType>
+            <xsd:sequence>
+                <xsd:element name="EntidadeOO" maxOccurs="unbounded"  minOccurs="1">
+                    <xsd:complexType>
+                        <xsd:sequence>
+                            <xsd:element name="EntidadeER" maxOccurs="unbounded"  minOccurs="1">
+                                <xsd:complexType>
+                                    <xsd:sequence>
+                                        <xsd:element name="ChavePrimaria" maxOccurs="unbounded"  minOccurs="0">
+                                            <xsd:complexType>
+                                                <xsd:attribute name="nome" type="xsd:string" use="required"/>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                        <xsd:element name="ChaveEstrangeira" maxOccurs="unbounded"  minOccurs="0">
+                                            <xsd:complexType>
+                                                <xsd:attribute name="nome" type="xsd:string" use="required"/>
+                                            </xsd:complexType>
+                                        </xsd:element>
+                                    </xsd:sequence>
+                                    <xsd:attribute name="nome" type="xsd:string" use="required"/>
+                                    <xsd:attribute name="isJoinTable" type="xsd:boolean" use="required"/>
+                                    <xsd:attribute name="isPrincipal" type="xsd:boolean" use="required"/>
+                                </xsd:complexType>
+                            </xsd:element>
+                        </xsd:sequence>
+                        <xsd:attribute name="nome" type="xsd:ID" use="required"/>
+                        <xsd:attribute name="classe" type="xsd:string" use="required"/>
+                    </xsd:complexType>
+                </xsd:element>
+                 <xsd:element name="Relacionamento" maxOccurs="unbounded"  minOccurs="0">
+                    <xsd:complexType>
+                        <!-- Nome da entidade 1, (entidade pai - ex: Curso tem Oferta) -->
+                        <xsd:attribute name="entidade1" type="xsd:IDREF" use="required"/>
+                        <!-- Nome da entidade N, (entidade filha - ex: Oferta é de um Curso) -->
+                        <xsd:attribute name="entidadeN" type="xsd:IDREF" use="required"/>
+                        <!-- indica o tipo do relacionamento (oneToOne, oneToMany, manyToOne, manyToMany)-->
+                        <xsd:attribute name="tipo" type="tipoRelacionamento" use="required"/>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+        </xsd:complexType>
+    </xsd:element>
+    <!-- Tipo para indicar o tipo do relacionamento -->
+    <xsd:simpleType name="tipoRelacionamento">
+        <xsd:restriction base="xsd:string">
+            <xsd:enumeration value="oneToOne"/>
+            <xsd:enumeration value="oneToMany"/>
+            <xsd:enumeration value="manyToOne"/>
+             <xsd:enumeration value="manyToMany"/>
+        </xsd:restriction>
+    </xsd:simpleType>
+
+</xsd:schema>

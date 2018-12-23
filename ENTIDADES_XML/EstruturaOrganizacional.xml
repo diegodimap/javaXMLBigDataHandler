@@ -1,0 +1,10 @@
+<entidade>
+<name>br.gov.mec.siga.edu.nucleo.dominio.EstruturaOrganizacional</name> 
+<atributes>
+<atribute type="long">id</atribute>
+<atribute type="class java.util.Date">dataInicio</atribute>
+<atribute type="class java.util.Date">dataFim</atribute>
+<atribute type="class java.util.Date">publicacao_DO</atribute>
+<atribute type="class br.gov.mec.siga.edu.nucleo.dominio.UnidadeEnsino">unidadeEnsino</atribute>
+</atributes>
+</entidade>

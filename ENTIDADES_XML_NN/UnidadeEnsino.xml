@@ -1,0 +1,10 @@
+<entidade>
+<name>br.gov.mec.siga.edu.nucleo.dominio.UnidadeEnsino</name> 
+<atributes>
+<atribute type="interface java.util.List">unidadeOrganizacional</atribute>
+<atribute type="interface java.util.List">estruturaOrganizacional</atribute>
+<atribute type="interface java.util.Set">regrasAcademicas</atribute>
+<atribute type="interface java.util.Set">estruturaAvaliacao</atribute>
+<atribute type="interface java.util.Collection">calendarioAcademico</atribute>
+</atributes>
+</entidade>

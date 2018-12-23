@@ -1,0 +1,8 @@
+<entidade>
+<name>br.gov.mec.siga.edu.nucleo.dominio.EtapaAvaliacao</name> 
+<atributes>
+<atribute type="long">id</atribute>
+<atribute type="class java.lang.String">nome</atribute>
+<atribute type="class br.gov.mec.siga.edu.nucleo.dominio.EstruturaDeAvaliacao">estruturaDeAvaliacao</atribute>
+</atributes>
+</entidade>

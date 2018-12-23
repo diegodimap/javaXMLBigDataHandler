@@ -1,0 +1,9 @@
+<entidade>
+<name>br.gov.mec.siga.edu.nucleo.dominio.AtividadesRequisitadas</name> 
+<atributes>
+<atribute type="long">id</atribute>
+<atribute type="class java.lang.String">codigo</atribute>
+<atribute type="class java.lang.String">descricao</atribute>
+<atribute type="class br.gov.mec.siga.edu.nucleo.dominio.AtividadeAcademica">atividadeAcademica</atribute>
+</atributes>
+</entidade>

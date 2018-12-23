@@ -1,0 +1,6 @@
+<entidade>
+<name>br.gov.mec.siga.edu.nucleo.dominio.DocumentoOficial</name> 
+<atributes>
+<atribute type="interface java.util.Collection">curso</atribute>
+</atributes>
+</entidade>

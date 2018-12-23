@@ -1,0 +1,10 @@
+<entidade>
+<name>br.gov.mec.siga.edu.nucleo.dominio.MatrizCurricular</name> 
+<atributes>
+<atribute type="long">id</atribute>
+<atribute type="class java.lang.String">nome</atribute>
+<atribute type="class br.gov.mec.siga.edu.nucleo.dominio.Curso">curso</atribute>
+<atribute type="class java.util.Date">inicioOferta</atribute>
+<atribute type="class java.util.Date">fimOferta</atribute>
+</atributes>
+</entidade>

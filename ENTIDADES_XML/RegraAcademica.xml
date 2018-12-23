@@ -1,0 +1,10 @@
+<entidade>
+<name>br.gov.mec.siga.edu.nucleo.dominio.RegraAcademica</name> 
+<atributes>
+<atribute type="long">id</atribute>
+<atribute type="class java.util.Date">dataInicialVigencia</atribute>
+<atribute type="class java.util.Date">dataCriacao</atribute>
+<atribute type="double">valor</atribute>
+<atribute type="class java.lang.String">descricao</atribute>
+</atributes>
+</entidade>

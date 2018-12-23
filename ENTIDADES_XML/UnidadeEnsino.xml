@@ -1,0 +1,18 @@
+<entidade>
+<name>br.gov.mec.siga.edu.nucleo.dominio.UnidadeEnsino</name> 
+<atributes>
+<atribute type="long">id</atribute>
+<atribute type="class java.lang.String">tipo</atribute>
+<atribute type="class java.lang.String">nome</atribute>
+<atribute type="int">areaTerreno</atribute>
+<atribute type="int">areaConstruida</atribute>
+<atribute type="int">areaAdministrativa</atribute>
+<atribute type="int">areaPedagogica</atribute>
+<atribute type="int">areaLaboratorios</atribute>
+<atribute type="int">areaEsportiva</atribute>
+<atribute type="int">areaTotal</atribute>
+<atribute type="class java.lang.Boolean">conectividade</atribute>
+<atribute type="int">velocidadeConexao</atribute>
+<atribute type="class br.gov.mec.siga.edu.nucleo.dominio.Instituicao">instituicao</atribute>
+</atributes>
+</entidade>

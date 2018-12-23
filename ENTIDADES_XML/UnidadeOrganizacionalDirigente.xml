@@ -1,0 +1,11 @@
+<entidade>
+<name>br.gov.mec.siga.edu.nucleo.dominio.UnidadeOrganizacionalDirigente</name> 
+<atributes>
+<atribute type="long">id</atribute>
+<atribute type="class java.util.Date">dataInicioMandato</atribute>
+<atribute type="class java.util.Date">dataFimMandato</atribute>
+<atribute type="class br.gov.mec.siga.edu.nucleo.dominio.Dirigente">dirigente</atribute>
+<atribute type="class br.gov.mec.siga.edu.nucleo.dominio.UnidadeOrganizacional">unidadeOrganizacional</atribute>
+<atribute type="class java.lang.String">portaria</atribute>
+</atributes>
+</entidade>

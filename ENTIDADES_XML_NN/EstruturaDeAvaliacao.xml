@@ -1,0 +1,6 @@
+<entidade>
+<name>br.gov.mec.siga.edu.nucleo.dominio.EstruturaDeAvaliacao</name> 
+<atributes>
+<atribute type="interface java.util.Collection">etapaAvaliacao</atribute>
+</atributes>
+</entidade>

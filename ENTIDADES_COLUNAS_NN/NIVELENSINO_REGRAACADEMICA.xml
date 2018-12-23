@@ -1,0 +1,10 @@
+<colunas>
+<coluna>
+<name>regrasAcademicas</name> 
+<type>int</type>
+</coluna>
+<coluna>
+<name>nivelEnsinos</name> 
+<type>numeric</type>
+</coluna>
+</colunas>
